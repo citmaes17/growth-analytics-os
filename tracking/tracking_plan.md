@@ -44,3 +44,8 @@ For MVP, synthetic generator will attach experiment fields to events after assig
 - `purchase.revenue` > 0
 - `event_name` must be one of the approved events
 - UTMs must follow `tracking/utm_spec.md`
+
+## Notes for analysts (why this design)
+- Events are designed to support a standard e-commerce funnel and can be modeled into `fact_events` and `fact_orders`.
+- UTMs are governed to avoid attribution fragmentation (e.g., `Instagram` vs `instagram`).
+- Experiment fields enable SRM checks and uplift estimation in downstream notebooks.
