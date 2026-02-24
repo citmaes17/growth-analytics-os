@@ -179,3 +179,8 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Synthetic outputs (do not commit)
+data/synthetic/*.parquet
+data/synthetic/*.csv
+data/synthetic/*.json
