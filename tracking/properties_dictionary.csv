@@ -1,0 +1,36 @@
+event_name,parameter_name,data_type,required,example,description
+*,event_id,STRING,YES,evt_000001,Unique event identifier
+*,event_ts,TIMESTAMP,YES,2026-02-24T10:15:00Z,Event timestamp (UTC)
+*,user_id,STRING,YES,u_000123,Synthetic user identifier
+*,session_id,STRING,YES,s_000045,Synthetic session identifier
+*,device_category,STRING,NO,mobile,Device category (mobile/desktop/tablet)
+*,country,STRING,NO,ES,ISO country code
+*,acquisition_channel,STRING,NO,paid_social,High-level channel grouping
+*,utm_source,STRING,NO,instagram,UTM source
+*,utm_medium,STRING,NO,paid_social,UTM medium
+*,utm_campaign,STRING,NO,summer_sale,UTM campaign
+*,utm_content,STRING,NO,story_ad_1,UTM content
+*,utm_term,STRING,NO,red_shoes,UTM term
+page_view,page_type,STRING,NO,product,Page type (home/category/product/cart/checkout)
+page_view,page_path,STRING,NO,/product/sku123,URL path
+page_view,referrer,STRING,NO,https://google.com,Referrer URL
+view_item,item_id,STRING,YES,sku123,Product SKU/ID
+view_item,item_category,STRING,NO,shoes,Product category
+view_item,price,NUMERIC,NO,49.99,Displayed item price
+search,search_term,STRING,YES,running shoes,Search query
+search,results_count,INT64,NO,42,Number of results returned
+click,click_target,STRING,YES,add_to_cart_button,UI element identifier
+click,click_text,STRING,NO,Add to cart,Visible text (if relevant)
+add_to_cart,item_id,STRING,YES,sku123,Added product ID
+add_to_cart,quantity,INT64,YES,1,Quantity added
+add_to_cart,price,NUMERIC,NO,49.99,Item price at add-to-cart
+start_checkout,cart_value,NUMERIC,YES,89.98,Cart total value
+start_checkout,items_count,INT64,YES,2,Number of items in cart
+purchase,order_id,STRING,YES,ord_000777,Unique order identifier
+purchase,revenue,NUMERIC,YES,89.98,Order revenue (gross)
+purchase,currency,STRING,YES,EUR,ISO currency code
+purchase,items_count,INT64,YES,2,Items in the order
+purchase,payment_type,STRING,NO,card,Payment method
+*,experiment_id,STRING,NO,exp_checkout_001,Experiment identifier
+*,variant,STRING,NO,control,Experiment variant
+*,assignment_date,DATE,NO,2026-02-10,Date user was assigned to experiment
